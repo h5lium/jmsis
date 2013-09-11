@@ -126,7 +126,7 @@ function makeMenu(onLoad){
 function makeTabs($current){
 	$('.content-box-tabs').remove();
 	var $header = $('.content-box-header');
-	var $h3 = $header.children('h3').text($current.attr('title'));
+	//var $h3 = $header.children('h3').text($current.attr('title'));
 	var $tabitems = $current.children();
 	
 	if ($tabitems && $tabitems.length) {
@@ -142,7 +142,8 @@ function makeTabs($current){
 			}
 			$('<li>').append($a).appendTo($tab_list);
 		});
-		$h3.after($tab_list);
+		//$h3.after($tab_list);
+		$header.append($tab_list);
 	}
 }
 

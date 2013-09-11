@@ -17,7 +17,6 @@ a, input[type="checkbox"], input[type="radio"] {
 	cursor: pointer;
 }
 .content-box-header {
-	height: auto;
 	margin-bottom: -1px;
 }
 #profile-links > span {

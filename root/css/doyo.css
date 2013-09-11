@@ -293,14 +293,16 @@ a.remove-link:hover {
                 height: 40px;
                 }
 
-.content-box-header h3 {
+/*.content-box-header h3 {
                 padding: 12px 15px 10px;
                 float: left;
-                }
-
+              }*/
+.content-box-header {
+	height: 42px;
+}
 ul.content-box-tabs {
-                float: right;
-                padding: 12px 15px 0 0 !important;
+				font-size: 120%;
+                padding: 10px 0 0 8px !important;
 				margin: 0 !important;
                 }
 
