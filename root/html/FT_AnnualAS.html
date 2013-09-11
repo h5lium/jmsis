@@ -1,0 +1,121 @@
+﻿
+
+		<style>
+			form .row-fluid {
+				margin-bottom: 12px;
+				font-family: "微软雅黑";
+			}
+			textarea {
+				resize: none;
+				width: 400px;
+				height: 180px;
+			}
+
+		</style>
+
+		<div class="span9">
+
+			<form class="form-horizontal" action="PredicationChart.html">
+				<div class="block">
+					<legend>
+						<i class="icon-check"></i>基金科年度分析设置
+					</legend>
+
+					<div class="control-group">
+						<label class="control-label"> 分析区域： </label>
+						<div class="controls">
+							<select name="AREA" id="AREA" class="input-xlarge">
+								<option value="0" selected=""></option>
+								<option value="1">市区</option>
+								<option value="3">蓬江</option>
+								<option value="4">江海</option>
+								<option value="5">台山</option>
+								<option value="6">新会</option>
+								<option value="7">开平</option>
+								<option value="8">鹤山</option>
+								<option value="9">恩平</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label"> 分析险种： </label>
+						<div class="controls">
+							<select name="InsuType" class="input-xlarge">
+								<option value="0">企业养老保险</option>
+								<option value="3">失业保险</option>
+								<option value="4">职工基本医疗保险</option>
+								<option value="7">工伤保险</option>
+								<option value="8">生育保险</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label"> 分析内容： </label>
+						<div class="controls">
+							<select name="StatType" class="input-xlarge">
+								<option value="0">总收入/总支出年度环比</option>
+								<option value="1">征缴收入/待遇支出年度环比</option>
+								<option value="2">总收入/总支出年度环比增幅百分比</option>
+								<option value="3">征缴收入/待遇支出年度环比增幅百分比</option>
+								<option value="4">历年累计结余年度环比</option>
+								<option value="5">历年累计结余年度环比增幅百分比</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label"> 开始年份： </label>
+						<div class="controls">
+							<input type="text" class="datepicker_c" name="KSNF" id="KSNF"/>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label"> 结束年份： </label>
+						<div class="controls">
+							<input type="text" class="datepicker_c" name="JSNF" id="JSNF"/>
+						</div>
+					</div>
+
+					<div class="control-group">
+						<div class="controls">
+							<button type="submit" class="btn btn-primary">
+								开始分析
+							</button>
+
+						</div>
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+	
+
+	<script>
+		$(function() {
+			$(".datepicker_c").datepicker({
+				//"changeMonth" : false,
+				"changeYear" : true,
+				"dateFormat" : 'yy',
+			});
+		});
+	</script>
+
+	<style>
+		.block {
+			background-color: #F9F9F9;
+			border: solid 30px #F9F9F9;
+			border-radius: 6px;
+		}
+		form legend {
+			font-weight: bold;
+		}
+		form legend i {
+			margin-top: 7px !important;
+			margin-left: 7px !important;
+		}
+
+	</style>

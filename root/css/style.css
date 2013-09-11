@@ -1,0 +1,45 @@
+#logo {
+	margin-left: 10px !important;
+}
+
+table>caption {
+	font-size: 21px;
+	font-weight: bold;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.td-sole {
+	text-align: center;
+}
+
+a, input[type="checkbox"], input[type="radio"] {
+	cursor: pointer;
+}
+.content-box-header {
+	height: auto;
+	margin-bottom: -1px;
+}
+#profile-links > span {
+	color: #aaa;
+}
+
+.block {
+	border-radius: 6px;
+	background-color: #F9F9F9;
+	border: solid 30px #F9F9F9;
+	border-bottom-width: 15px;
+}
+
+form legend>i, table caption>i {
+	margin-top: 7px !important;
+	margin-right: 7px !important;
+}
+
+
+form legend {
+	font-weight: bold;
+}
+form label {
+	cursor: pointer;
+}

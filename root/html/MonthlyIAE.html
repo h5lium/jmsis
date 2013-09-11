@@ -1,0 +1,113 @@
+<style>
+	body {
+		font-family: "微软雅黑"
+	}
+
+	#explaination {
+		border: 20px;
+		solid: #ffffff;
+	}
+
+	#explaination ul .redpoint {
+		list-style-image: url("images/charts/red.jpg");
+	}
+
+	#explaination ul .bluepoint {
+		list-style-image: url("images/charts/blue.jpg");
+	}
+
+	#explaination ul .greenpoint {
+		list-style-image: url("images/charts/green.jpg");
+	}
+
+	#explaination ul {
+		padding-left: 200px;
+	}
+</style>
+
+
+<form>
+	<p>
+		<h3>查看区间</h3>
+	</p>
+
+	<p>
+		开始月份:
+		<input type="text" class="datepicker_c" />
+		结束月份:
+		<input type="text" class="datepicker_c" />
+
+		区域选择:
+		<select>
+			<option>市区</option>
+			<option>蓬江</option>
+			<option>江海</option>
+			<option>台山</option>
+			<option>新会</option>
+			<option>开平</option>
+			<option>鹤山</option>
+			<option>恩平</option>
+		</select>
+
+		<input type="submit" value="提交"/>
+		<input type="reset" value="重置"/>
+	</p>
+</form>
+
+<canvas id="MonthlyIAE" width="600" height="300">
+	error
+</canvas>
+
+<div id="explaination">
+
+	<ul>
+
+		<li class="redpoint">
+			江门社保养老保险基金收入累计
+		</li>
+		<li class="bluepoint">
+			江门社保养老保险基金支出累计
+		</li>
+		<li class="greenpoint">
+			江门社保养老保险基金余额累计
+		</li>
+
+	</ul>
+
+</div>
+
+</body>
+
+<script>
+	var data = {
+		labels : ["一月", "二月", "三月", "四月", "五月", "六月", "七月"],
+		datasets : [{
+			fillColor : "rgba(220,220,220,0.4)",
+			strokeColor : "rgba(255, 106, 106,1)",
+			data : [65, 59, 90, 81, 96, 55, 100]
+		}, {
+			fillColor : "rgba(151,187,205,0.5)",
+			strokeColor : "rgba(132, 112, 255,1)",
+			data : [28, 48, 40, 19, 56, 27, 40]
+		}, {
+			fillColor : "rgba(220,220,220,0.4)",
+			strokeColor : "rgba(0,220,220,1)",
+			data : [37, 11, 50, 62, 40, 28, 60]
+		}]
+
+	}//for json
+	//MonthlyIAE.jhtml
+
+	var ctx = document.getElementById("MonthlyIAE").getContext("2d");
+	var myNewChart = new Chart(ctx).Line(data); 
+</script>
+
+<script>
+	$(function() {
+		$(".datepicker_c").datepicker();
+	}); 
+</script>
+
+<script>
+	
+</script>

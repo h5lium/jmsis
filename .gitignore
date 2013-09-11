@@ -1,0 +1,13 @@
+/.project
+/.idea
+/*.zip
+/*.txt
+/npm-debug.log
+/.classpath
+/src
+/root/modules
+/root/jhtml
+/root/test
+/root/META-INF
+/root/WEB-INF
+/root/xls

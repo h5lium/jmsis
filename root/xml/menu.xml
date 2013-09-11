@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu title="功能列表">
+	<item code="PENSION" title="养老保险">
+		<item code="A" title="养老保险基金监测">
+			<item code="A" title="月度收支状况监测" old-href="modules/PI_ctl.jsp?target=MonthlyIAE&amp;action=chart" href="MonthlyIAE.html"></item>
+			<item code="B" title="企业欠费状况" old-href="modules/PI_ctl.jsp" href="FirmArrearageList.html"></item>
+		</item>
+		<item code="B" title="养老保险业务检测">
+			<item code="A" title="养老金发放变化检索" old-href="modules/PI_ctl.jsp?action=list&amp;target=AUPL" href="PI_AUPLList.html"></item>
+			<item code="B" title="待遇发放异常检索" old-href="modules/PI_ctl.jsp?action=list&amp;target=MonthlyAPL" href="PI_MonthlyAPL.html"></item>
+			<item code="C" title="人员信息异常检索" old-href="modules/PI_ctl.jsp?action=list&amp;target=API" href="PI_API.html"></item>
+		</item>
+		<item code="C" title="养老保险基金收支预测">
+			<item code="A" title="预测预警图" old-href="modules/PI_ctl.jsp?action=chart&amp;target=Predication" href="PredicationChart.html"></item>
+			<item code="B" title="政策模拟" old-href="modules/PI_ctl.jsp?action=setup&amp;target=ParameterSimulation" href="ParameterSimulation.html"></item>
+		</item>
+	</item>
+	<item title="医疗保险">
+		<item title="效能监控" old-href="modules/MI_ctl.jsp?action=setup&amp;target=EffMoniter"></item>
+		<item title="月度费用支出监控">
+			<item title="大额费用支出监控" old-href="modules/MediInsuMonthlyPayChk_ctl.jsp?action=list&amp;target=MonthlyAbnormalPay"></item>
+			<item title="市直公务员医疗保险医疗费用情况统计表" old-href="modules/MediInsuMonthlyPayChk_ctl.jsp?action=list&amp;target=PubServMIFEE"></item>
+			<item title="城乡居民基本医疗保险收支情况表" old-href="modules/MediInsuMonthlyPayChk_ctl.jsp?action=list&amp;target=InhabitantMIFEE"></item>
+			<item title="离休干部医疗费用统计表" old-href="modules/MediInsuMonthlyPayChk_ctl.jsp?action=list&amp;target=RetiredCadreMedFee"></item>
+			<item title="补充医疗保险赔付情况月度统计表" old-href="modules/MediInsuMonthlyPayChk_ctl.jsp?action=list&amp;target=ExpMIFEE"></item>
+			<item title="月度收支状况监测" old-href="modules/MI_ctl.jsp?action=chart&amp;target=MonthlyIAE"></item>
+		</item>
+		<item title="月度结算指标监测">
+			<item title="月度住院率分析" old-href="modules/MIMonthlyIndicatorCheck_ctl.jsp?action=list&amp;target=MonthlyFOBH"></item>
+			<item title="月度报销率分析" old-href="modules/MIMonthlyIndicatorCheck_ctl.jsp?action=list&amp;target=MonthlyROWO"></item>
+			<item title="月度人均费用分析" old-href="modules/MIMonthlyIndicatorCheck_ctl.jsp?action=list&amp;target=MonthlyPCF"></item>
+		</item>
+		<item title="年度费用支出监测">
+			<item title="市区基本医疗保险基金收支年度统计表" old-href="modules/MIAnnualPayCheck_ctl.jsp?action=list&amp;target=AnnualBFEE"></item>
+			<item title="市直公务员医疗保险医疗费用情况年度统计表" old-href="modules/MIAnnualPayCheck_ctl.jsp?action=list&amp;target=AnnualPSFEE"></item>
+			<item title="城乡居民基本医疗保险年度收支情况表" old-href="modules/MIAnnualPayCheck_ctl.jsp?action=list&amp;target=AnnualIFEE"></item>
+			<item title="补充医疗保险赔付情况年度统计表" old-href="modules/MIAnnualPayCheck_ctl.jsp?action=list&amp;target=AnnualEFEE"></item>
+			<item title="年度收支预测预警" old-href="modules/MI_ctl.jsp?action=chart&amp;target=AnnualFP"></item>
+		</item>
+		<item title="年度结算指标监测">
+			<item title="年度住院率分析" old-href="modules/MIAnnualIndicatorCheck _ctl.jsp?action=list&amp;target=AnnualROBH"></item>
+			<item title="年度报销率分析" old-href="modules/MIAnnualIndicatorCheck _ctl.jsp?action=list&amp;target=AnnualROWO"></item>
+			<item title="人均费用分析" old-href="modules/MIAnnualIndicatorCheck _ctl.jsp?action=list&amp;target=AnnualPCF"></item>
+		</item>
+	</item>
+	<item title="工伤保险">
+		<item title="效能监控" old-href="modules/EI_ctl.jsp?action=setup&amp;target=EffMoniter"></item>
+		<item title="月度费用支出监控">
+			<item title="大额费用支出检索" old-href="modules/EI_ctl.jsp?action=list&amp;target=MonthlyAPL"></item>
+			<item title="统筹区工伤保险待遇情况月度统计表" old-href="modules/EI_ctl.jsp?action=list&amp;target=MonthlyITF"></item>
+			<item title="工伤保险基金收支情况月度统计表" old-href="modules/EI_ctl.jsp?action=list&amp;target=MonthlyFS"></item>
+			<item title="月度收支状况监测" old-href="modules/EI_ctl.jsp?action=chart&amp;target=MonthlyIAE"></item>
+		</item>
+		<item title="年度费用支出监测">
+			<item title="统筹区工伤保险待遇情况年度统计表" old-href="modules/EI_ctl.jsp?action=list&amp;target=AnnualITF"></item>
+			<item title="工伤保险基金收支情况年度统计表" old-href="modules/EI_ctl.jsp?action=list&amp;target=AnnualFS"></item>
+			<item title="年度收支预测预警" herf="modules/EI_ctl.jsp?action=chart&amp;target=AnnualFP"></item>
+		</item>
+	</item>
+	<item title="生育保险">
+		<item title="月度费用支出监控">
+			<item title="大额费用支出检索" old-href="modules/BI_ctl.jsp?action=list&amp;target=MonthlyAPL"></item>
+			<item title="统筹区生育保险待遇情况月度统计表" old-href="modules/BI_ctl.jsp?action=list&amp;target=MonthlyITF"></item>
+			<item title="生育保险基金收支情况月度统计表" old-href="modules/BI_ctl.jsp?action=list&amp;target=MonthlyFS"></item>
+			<item title="月度收支状况监测" old-href="modules/BI_ctl.jsp?action=chart&amp;target=MonthlyIAE"></item>
+		</item>
+		<item title="年度费用支出监测">
+			<item title="统筹区生育保险待遇情况年度统计表" old-href="modules/BI_ctl.jsp?action=list&amp;target=AnnualITF"></item>
+			<item title="生育保险基金收支情况年度统计表" old-href="modules/BI_ctl.jsp?action=list&amp;target=AnnualFS"></item>
+			<item title="年度收支预测预警" old-href="modules/BI_ctl.jsp?action=chart&amp;target=AnnualFP"></item>
+		</item>
+	</item>
+	<item title="失业保险">
+		<item title="失业保险业务检测">
+			<item title="人员信息异常检索" old-href="modules/UI_ctl.jsp?action=list&amp;target=API"></item>
+			<item title="失业金发放变化检索" old-href="modules/UI_ctl.jsp?action=list&amp;target=AUPL"></item>
+			<item title="待遇发放异常检索" old-href="modules/UI_ctl.jsp?action=list&amp;target=APL"></item>
+			<item title="月度收支状况监测" old-href="modules/UI_ctl.jsp?action=chart&amp;target=MonthlyIAE"></item>
+		</item>
+		<item title="年度费用支出监测">
+			<item title="年度收支预测预警" old-href="modules/UI_ctl.jsp?action=chart&amp;target=AnnualFP"></item>
+		</item>
+	</item>
+	<item code="FINANCE" title="计划财务科">
+		<item code="A" title="年度分析" old-href="modules/FD_ctl.jsp?action=setup&amp;target=AnnualAnalyze" href="FT_AnnualAS.html"></item>
+		<item code="B" title="季度分析" old-href="modules/FD_ctl.jsp?action=setup&amp;target=QuarterAnalyze" href="FT_QuarterAS.html"></item>
+		<item code="C" title="数据管理" old-href="modules/FD_ctl.jsp?action=list&amp;target=FT_Data" href="FT_DataList.html"></item>
+		<item code="C" title="预算辅助" old-href="" href=""></item>
+	</item>
+	<item code="SYSTEM" title="系统设置">
+		<item code="A" title="用户管理" old-href="modules/UserManage_ctl.jsp" href="UserManageList.html"></item>
+		<item code="B" title="修改个人信息" old-href="modules/UserManage_ctl.jsp?action=show&amp;target=pinfo" href="PInfo.html"></item>
+	</item>
+	<item title="退出登录" old-href="logout.jsp" href="index.html"></item>
+</menu>

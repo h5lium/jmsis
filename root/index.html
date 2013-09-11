@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>  江门社保基金收支监测预警系统</title>
+		<meta name="keywords" content="ZCNCMS专注内容">
+		<meta name="description" content="ZCNCMS专注内容">
+		<link rel="stylesheet" href="css/lib/reset.css" />
+		<link rel="stylesheet" href="css/lib/invalid.css" />
+		<link rel="stylesheet" href="css/doyo.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body id="login">
+		<div id="login-wrapper" class="png_bg">
+			<div id="login-top">
+				<h1>江门社保基金收支监测预警系统</h1>
+				<img id="logo" src="images/logo_.png"/>
+			</div>
+			<!-- End #logn-top -->
+
+			<div id="login-content">
+
+				<form action="" name="loginform" method="post">
+
+					<div class="notification information png_bg">
+						<div>
+							请输入用户名密码登陆.
+						</div>
+					</div>
+
+					<p>
+						<label>用户</label>
+						<input class="text-input" type="text" name="username" />
+					</p>
+					<div class="clear"></div>
+					<p>
+						<label>密码</label>
+						<input class="text-input" type="password" name="password" />
+					</p>
+					<div class="clear"></div>
+					<!--<p id="remember-password">
+					<input type="checkbox" />记住我
+					</p>
+					<div class="clear"></div> -->
+					<p>
+						<input class="button" type="submit" name="submit" value="登陆" />
+					</p>
+
+				</form>
+			</div>
+			<!-- End #login-content -->
+
+		</div>
+		<!-- End #login-wrapper -->
+		
+		<script src="js/lib/jquery.min.js"></script>
+		<script>
+			$('form').on('submit', function(){
+				window.location.href = 'main.html';
+				return false;
+			});
+		</script>
+	</body>
+</html>

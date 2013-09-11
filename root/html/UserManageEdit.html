@@ -1,0 +1,103 @@
+
+<style>
+	form .row-fluid {
+		margin-bottom: 12px;
+		font-family: "微软雅黑";
+	}
+	textarea {
+		resize: none;
+		width: 400px;
+		height: 180px;
+	}
+	
+	.controls.checkboxes {
+		margin-top: -5px;
+	}
+	label.checkbox {
+		display: inline-block;
+		margin-right: 22px;
+	}
+</style>
+
+<div class="span9">
+
+	<form class="form-horizontal" action="modules/UserManage_ctl.jsp?action=saveinfo&target=pinfo">
+		<div class="block">
+			<legend>
+				<i class="icon-check"></i>修改用户信息
+			</legend>
+			<div class="control-group">
+				<label class="control-label"> 用户名: </label>
+				<div class="controls">
+					<input type="text" placeholder="用户名" value="admin" disabled>
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label"> 中文名: </label>
+				<div class="controls">
+					<input type="text" placeholder="中文名" value="系统管理员">
+				</div>
+			</div>
+
+			<div class="control-group">
+				<label class="control-label"> 权限说明： </label>
+				<div class="controls">
+					<input type="text"  placeholder="权限说明" value="江门市社保局">
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"> 所属区域： </label>
+				<div class="controls checkboxes">
+					<label class="checkbox">
+						<input type="checkbox">市区
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">蓬江
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">江海
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">泰山
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">新会
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">开平
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">鹤山
+					</label>
+					<label class="checkbox">
+						<input type="checkbox">恩平
+					</label>
+				</div>
+			</div>
+			
+			<div class="control-group">
+				<label class="control-label"> 备注： </label>
+				<div class="controls">
+					<textarea rows="5">系统管理员，管理系统所有权限和基础数据设置 </textarea>
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-primary">
+						保存信息
+					</button>
+					<button  class="btn" href="modules/UserManage_ctl.jsp">
+						返回列表
+					</button>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+
+<script>
+	
+</script>
