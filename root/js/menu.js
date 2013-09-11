@@ -4,7 +4,6 @@
 function getCode($item){
 	var finalCode = '';
 	var code = '';
-	
 	while (code = $item.attr('code')) {
 		if (code) {
 			finalCode = code + (finalCode? '-': '') + finalCode;
@@ -13,20 +12,16 @@ function getCode($item){
 			break;
 		}
 	}
-	
 	return finalCode;
 }
 
 
 function goMenu(code){
 	var $nav = $('#main-nav');
-	
 	// the current
 	var $current = global.$menu.find('#' + code).parents().eq(-3);	// level-2
-	
 	$nav.find('.current').removeClass('current');
-	$nav.find('#' + code).addClass('current');
-	
+	$nav.find('#' + code.replace(/[^-]+$/, 'A')).addClass('current');
 	startMenu(code);
 	makeTabs($current);
 	startTabs(code);
@@ -35,7 +30,6 @@ function goMenu(code){
 function startMenu(code){
 		$("#main-nav li ul").hide(); // Hide all sub menus
 		$("#main-nav a.current").closest("ul").slideToggle("slow");
-		
 		var $all = $('#main-nav a[href]');
 		var $the = $all.filter('#' + code);
 		if ($the.length) {
@@ -49,11 +43,8 @@ function startMenu(code){
 
 function makeMenu(onLoad){
 	$.get('xml/menu.xml'+'?_r='+Math.random(), function(doc){
-		
 		var $menuData = $(doc).find('menu');
 		var $nav = $('#main-nav').hide().empty();
-		
-		
 		$menuData.children('item').each(function(i, topitem){
 			var $topitem = $(topitem);
 			var role = $topitem.attr('role'),
@@ -66,7 +57,6 @@ function makeMenu(onLoad){
 			} else {
 				var $a = $('<a class="nav-top-item">'+ title +'</a>');
 				var $li = $('<li>').append($a);
-				
 				var $subitems = $topitem.children('item');
 				if ($subitems.length) {
 					var $ul = $('<ul>');
@@ -75,16 +65,13 @@ function makeMenu(onLoad){
 						var title2 = $subitem.attr('title');
 						var href2 = $subitem.attr('href');
 						var $a2 = $('<a class="nav-sub-item">'+ title2 +'</a>');
-						
 						$a2.attr('href', href2 || 'null');
 						if (href2) {
-							
 							var code2 = getCode($subitem);
 							$subitem.attr('id', code2);
 							$a2.attr('id', code2);
 						}
 						var $li2 = $('<li>').append($a2);
-						
 						var $tabitems = $subitem.children('item');
 						if ($tabitems.length) {
 							$li2.data('tabitems', $tabitems);
@@ -101,7 +88,6 @@ function makeMenu(onLoad){
 								}
 							});
 						}
-						
 						$ul.append($li2);
 					});
 					
@@ -109,17 +95,11 @@ function makeMenu(onLoad){
 				} else {
 					$li.children('a').addClass('no-submenu');
 				}
-				
 				$nav.append($li);
 			}
-			$nav;
-			
-			
-			
 			// global.$menu
 			global.$menu = $menuData;
 		});
-		
 		
 		$('body').delegate("#main-nav li a.nav-top-item", 'click', // When a top menu item is clicked...
 			function () {
@@ -136,7 +116,6 @@ function makeMenu(onLoad){
 				$(this).stop().animate({ paddingRight: "15px" });
 			}
 		);
-		
 		onLoad();
 	});
 	
