@@ -1,14 +1,14 @@
 	var icons=new Array();
-	icons[0]="../images/Tmenu/Tblank.gif";
-	icons[1]="../images/Tmenu/TL.gif";
-	icons[2]="../images/Tmenu/TI.gif";
-	icons[3]="../images/Tmenu/TT.gif";
-	icons[4]="../images/Tmenu/Tminus1.gif";
-	icons[5]="../images/Tmenu/Tplus1.gif";
-	icons[6]="../images/Tmenu/Tminus.gif";
-	icons[7]="../images/Tmenu/Tplus.gif";
-	var fcicon="../images/Tmenu/Tfc.gif";
-	var foicon="../images/Tmenu/Tfo.gif";
+	icons[0]="images/Tmenu/Tblank.gif";
+	icons[1]="images/Tmenu/TL.gif";
+	icons[2]="images/Tmenu/TI.gif";
+	icons[3]="images/Tmenu/TT.gif";
+	icons[4]="images/Tmenu/Tminus1.gif";
+	icons[5]="images/Tmenu/Tplus1.gif";
+	icons[6]="images/Tmenu/Tminus.gif";
+	icons[7]="images/Tmenu/Tplus.gif";
+	var fcicon="images/Tmenu/Tfc.gif";
+	var foicon="images/Tmenu/Tfo.gif";
 	var nodelen=0;
 	var authlen=0;
 	var oldfocus=0;
@@ -212,7 +212,7 @@
 				{if (i==Level && pnode.Img && pnode.Img!="")
 					{
 						space="<img class='NODEIMG1' src='"+icons[iconV]+"' align=absMiddle>"+
-						"<img class='NODEIMG' src='../images/Tmenu/"+pnode.Img+"' align=absMiddle>"+space;
+						"<img class='NODEIMG' src='images/Tmenu/"+pnode.Img+"' align=absMiddle>"+space;
 					}
 					else
 					{

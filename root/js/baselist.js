@@ -12,7 +12,7 @@ function CheckAll(form)
 
 function delalert()
 {
-	if(confirm('×¢Òâ£ºÉ¾³ıµÄĞÅÏ¢½«²»ÄÜ»Ö¸´£¡ÊÇ·ñÈ·ÈÏ¼ÌĞø£¿'))
+	if(confirm('æ³¨æ„ï¼šåˆ é™¤çš„ä¿¡æ¯å°†ä¸èƒ½æ¢å¤ï¼æ˜¯å¦ç¡®è®¤ç»§ç»­ï¼Ÿ'))
 	{
 		this.form.submit();
 		return true;
@@ -20,7 +20,7 @@ function delalert()
 	return false;
 }
 
-function initSearch(idx,key)//³õÊ¼»¯²éÑ¯£¬¼ì²é²éÑ¯²ÎÊıÊäÈëÊÇ·ñ¹æ·¶
+function initSearch(idx,key)//åˆå§‹åŒ–æŸ¥è¯¢ï¼Œæ£€æŸ¥æŸ¥è¯¢å‚æ•°è¾“å…¥æ˜¯å¦è§„èŒƒ
 {
 	if (typeof SearchTypes=="undefined")
 	{
@@ -28,49 +28,49 @@ function initSearch(idx,key)//³õÊ¼»¯²éÑ¯£¬¼ì²é²éÑ¯²ÎÊıÊäÈëÊÇ·ñ¹æ·¶
 	}
 	if (idx==-1)
 	{
-		alert("ÇëÑ¡ÔñĞèÒª²éÕÒµÄĞÅÏ¢Ïî£¡");
+		alert("è¯·é€‰æ‹©éœ€è¦æŸ¥æ‰¾çš„ä¿¡æ¯é¡¹ï¼");
 		return false;
 	}
 	if (trim(key)=="")
 	{
-		alert("¹Ø¼ü×Ö²»ÄÜÎª¿Õ£¡");
+		alert("å…³é”®å­—ä¸èƒ½ä¸ºç©ºï¼");
 		return false;
 	}
 	dataType=SearchTypes[idx];
-	switch(dataType)//0Êı×Ö£¬1×Ö·û£¬2ÈÕÆÚ,3Ê±¼ä£¬4ÈÕÆÚÊ±¼ä
+	switch(dataType)//0æ•°å­—ï¼Œ1å­—ç¬¦ï¼Œ2æ—¥æœŸ,3æ—¶é—´ï¼Œ4æ—¥æœŸæ—¶é—´
 	{
 		case 0:
 			if (isNaN(key))
 			{
-				alert("²éÑ¯ÊäÈëµÄ¹Ø¼ü×Ö²»ÊÇÒ»¸öÓĞĞ§µÄÊı×Ö£¡");
+				alert("æŸ¥è¯¢è¾“å…¥çš„å…³é”®å­—ä¸æ˜¯ä¸€ä¸ªæœ‰æ•ˆçš„æ•°å­—ï¼");
 				return false;
 			}
 			break;
 		case 2:
 			if (!isDate(key))
 			{
-				alert("²éÑ¯ÊäÈëµÄ¹Ø¼ü×Ö±ØĞëÊÇÒ»¸öÈÕÆÚ£¡£¨Àı£º2008-02-31£©");
+				alert("æŸ¥è¯¢è¾“å…¥çš„å…³é”®å­—å¿…é¡»æ˜¯ä¸€ä¸ªæ—¥æœŸï¼ï¼ˆä¾‹ï¼š2008-02-31ï¼‰");
 				return false;
 			}
 			break;
 		case 3:
 			if (!isTime2(key))
 			{
-				alert("²éÑ¯ÊäÈëµÄ¹Ø¼ü×Ö±ØĞëÊÇÒ»¸öÊ±¼ä£¡£¨Àı£º21:08£©");
+				alert("æŸ¥è¯¢è¾“å…¥çš„å…³é”®å­—å¿…é¡»æ˜¯ä¸€ä¸ªæ—¶é—´ï¼ï¼ˆä¾‹ï¼š21:08ï¼‰");
 				return false;
 			}
 			break;
 		case 4:
 			if (!isDateTime(key))
 			{
-				alert("²éÑ¯ÊäÈëµÄ¹Ø¼ü×Ö±ØĞëÊÇÒ»¸öÈÕÆÚ+Ê±¼ä£¡£¨Àı£º2008-02-31 21:08£©");
+				alert("æŸ¥è¯¢è¾“å…¥çš„å…³é”®å­—å¿…é¡»æ˜¯ä¸€ä¸ªæ—¥æœŸ+æ—¶é—´ï¼ï¼ˆä¾‹ï¼š2008-02-31 21:08ï¼‰");
 				return false;
 			}
 			break;
 	}
 	return true;
 }
-//ÏìÓ¦ĞŞ¸Ä²éÑ¯²ÎÊı
+//å“åº”ä¿®æ”¹æŸ¥è¯¢å‚æ•°
 function changeSearchCondition(idx)
 {
 	if (typeof SearchTypes=="undefined")
@@ -88,19 +88,19 @@ function changeSearchCondition(idx)
 		switch (SearchTypes[idx])
 		{
 			case 1:
-				HtmlStr+='	<option value="0">µÈÓÚ</option>';
-				HtmlStr+='	<option value="1">²»µÈÓÚ</option>';
-				HtmlStr+='	<option value="2">°üº¬</option>';
-				HtmlStr+='	<option value="3">²»°üº¬</option>';
+				HtmlStr+='	<option value="0">ç­‰äº</option>';
+				HtmlStr+='	<option value="1">ä¸ç­‰äº</option>';
+				HtmlStr+='	<option value="2">åŒ…å«</option>';
+				HtmlStr+='	<option value="3">ä¸åŒ…å«</option>';
 				HtmlStr+='	</select>';
 				break;
 			default:
-				HtmlStr+='	<option value="0">µÈÓÚ</option>';
-				HtmlStr+='	<option value="1">²»µÈÓÚ</option>';
-				HtmlStr+='	<option value="4">´óÓÚ</option>';
-				HtmlStr+='	<option value="5">Ğ¡ÓÚ</option>';
-				HtmlStr+='	<option value="6">´óÓÚµÈÓÚ</option>';
-				HtmlStr+='	<option value="7">Ğ¡ÓÚµÈÓÚ</option>';
+				HtmlStr+='	<option value="0">ç­‰äº</option>';
+				HtmlStr+='	<option value="1">ä¸ç­‰äº</option>';
+				HtmlStr+='	<option value="4">å¤§äº</option>';
+				HtmlStr+='	<option value="5">å°äº</option>';
+				HtmlStr+='	<option value="6">å¤§äºç­‰äº</option>';
+				HtmlStr+='	<option value="7">å°äºç­‰äº</option>';
 				HtmlStr+='	</select>';
 		}
 	}

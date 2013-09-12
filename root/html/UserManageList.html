@@ -1,5 +1,5 @@
 
-<style>
+<style scoped>
 	#top {
 		margin-left: 14px;
 	}
@@ -227,13 +227,14 @@
 </form>
 
 <script>
-	$('tbody tr:even').addClass("alt-row");
-	
-	$('table tbody').delegate('td a:nth-child(1)', 'click', function(){
-		loadPage('UserManageEdit.html');
+	var $content = $('.content-box-content');
+	$content.find('tbody tr:even').addClass("alt-row");
+	$content.find('tbody td a:nth-child(1)').on('click', function(){
+		loadPage('html/UserManageEdit.html');
 		return false;
-	}).delegate('td a:nth-child(2)', 'click', function(){
-		loadPage('AuthEdit.html');
+	});
+	$content.find('tbody td a:nth-child(2)').on('click', function(){
+		loadPage('html/AuthEdit.html');
 		return false;
 	});
 </script>
